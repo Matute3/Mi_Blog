@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Post</title>
+</head>
+<body>
+    <h1>Crear un nuevo Post</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="title">Título:</label>
+        <input type="text" id="title" name="title"><br>
+        <label for="content">Contenido:</label>
+        <textarea id="content" name="content"></textarea><br>
+        <button type="submit">Crear</button>
+    </form>
+    <a href="{% url 'posts:post_list' %}">Volver a la lista</a>
+</body>
+</html>
